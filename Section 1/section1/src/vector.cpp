@@ -3,14 +3,11 @@
 #include "vector.h"
 using namespace std;
 Vector<int> removeConsecutiveDuplicates(Vector<int> v) {
-    int i = 0;
-    while(i < v.size()){
-        if(v[i] == v[i + 1]) {
-            v.remove(i);
-            continue;
+    for (int i = 0 ; i < v.size() ; i++) {
+        while (v[i] == v[i + 1]){
+            v.remove(i); 
         }
-        i++;
-    }
+    } 
     return v;
 }
 Vector<int> initVec(){
